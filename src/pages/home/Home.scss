@@ -1,0 +1,23 @@
+@import "../../css-config/mixins.scss";
+.home{
+    width: 100%;
+    min-height: calc(100vh - 70px);
+    background-color: rgb(209, 206, 206);
+    .homewrapper
+    {
+        max-width: 1400px;
+        margin: 0 auto;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+        gap: 10px;
+        .skeleton{
+            display: flex;
+            gap: 10px;
+            flex-wrap: wrap;
+            align-items: center;
+            justify-content: center;
+        }
+    }
+}

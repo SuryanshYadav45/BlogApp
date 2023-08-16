@@ -1,0 +1,137 @@
+@import "../../css-config/mixins.scss";
+
+.post {
+  width: 100%;
+  min-height: calc(100vh - 70px);
+  display: flex;
+  background-color: rgb(209, 206, 206);
+  justify-content: center;
+  align-items: center;
+  .postwrapper {
+    backdrop-filter: blur(10px);
+    background-color: rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 5px 15px;
+    margin: 10px 10px 10px 10px;
+    border-radius: 10px;
+    width: 100%;
+    max-width: 500px;
+    h3 {
+      margin: 10px;
+      padding: 5px;
+      text-align: center;
+      font-size: 25px;
+      text-transform: capitalize;
+    }
+    form {
+      display: flex;
+      justify-content: start;
+      align-items: start;
+      flex-direction: column;
+
+      input {
+        height: 25px;
+        margin-top: 10px;
+        width: 98%;
+        border: none;
+        border-radius: 5px;
+        padding: 5px;
+        &:focus {
+          outline: none;
+        }
+      }
+      textarea {
+        width: 98%;
+        border: none;
+        border-radius: 5px;
+        margin-top: 10px;
+        &:focus {
+          outline: none;
+        }
+      }
+      .selectdiv {
+        width: 100%;
+        height: 50px;
+        display: flex;
+        align-items: center;
+        select {
+          margin-left: 10px;
+          height: 30px;
+          border: none;
+        }
+      }
+      .avatarlabel {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: 20px;
+        cursor: pointer;
+      }
+      .postbtn {
+        width: 100%;
+        height: 35px;
+        margin-bottom: 10px;
+        border: none;
+        border-radius: 10px;
+        color: white;
+        background-color: black;
+        cursor: pointer;
+        text-transform: uppercase;
+      }
+    }
+  }
+}
+
+.nouser {
+  width: 100%;
+  min-height: calc(100vh - 70px);
+  display: flex;
+  background-color: rgb(209, 206, 206);
+  justify-content: center;
+  align-items: center;
+  .nouserwrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin: 10px;
+    h1{
+        margin: 10px;
+        text-align: center;
+        font-size: 23px;
+        @include md{
+            font-size: 24px;
+        }
+    }
+    p{
+        font-size: 16px;
+        margin-bottom: 40px;
+        text-align: center;
+        @include md{
+            font-size: 20px;
+            text-align: center;
+        }
+    }
+    .loginredirect {
+      text-decoration: none;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: black;
+      width: 140px;
+      font-weight: 600;
+      height: 40px;
+      border-radius: 5px;
+      background-color: rgba(0, 0, 0, 0.1);
+      border: 1px solid black;
+      cursor: pointer;
+      font-size: 16px;
+      box-shadow: 4px 4px 0 black;
+      transition: transform 0.3s, box-shadow 0.3s;
+      &:hover {
+        transform: translateX(4px) translateY(4px);
+        box-shadow: 0px 0px 0 black;
+      }
+    }
+  }
+}

@@ -1,0 +1,21 @@
+@import "../../css-config/mixins.scss";
+
+.about{
+    background-color: rgb(209, 206, 206);
+    min-height: calc(100vh - 70px);
+    
+    .aboutwrapper
+    {
+        max-width: 1300px;
+        width: 100%;
+        margin: 0 auto;
+        padding: 20px 0;
+        p{
+            padding: 0px 10px;
+            text-align: justify;
+            @include md{
+                font-size: 20px;
+            }
+        }
+    }
+}

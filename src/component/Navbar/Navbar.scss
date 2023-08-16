@@ -1,0 +1,232 @@
+@import "../../css-config/mixins.scss";
+
+// .navbar{
+//     background-color: black;
+//     height: 70px;
+//     position: relative;
+//     .navbarWrapper
+//     {
+//         padding: 3px 10px;
+//         max-width: 1300px;
+//         margin: 0 auto;
+//         display: flex;
+//         justify-content: space-between;
+//         align-items: center;
+//         @include md{
+            
+//         }
+//         .title{
+//             color: white;
+//             text-decoration: none;
+//             font-size: 23px;
+//         }
+//         .right
+//         {
+//             display: flex;
+//             align-items: center;
+//             ul{
+//                 display: none;
+//                 @include md{
+//                     display: flex;
+//                 }
+//                 .logoutbtn{
+//                     width:80px;
+//                     height: 30px;
+//                     border-radius: 5px;
+//                     border: none;
+//                     svg{
+//                         margin-left: 5px;
+//                     }
+//                 }
+//                 li{
+//                     list-style: none;
+//                     padding: 3px 15px;
+//                     position: relative;
+//                     &:before{
+//                         position: absolute;
+//                         content: " ";
+//                         top:0;
+//                         left:0;
+//                         width:0;
+//                         height: 4px;
+//                         transition:0.3s ease-in;
+//                         border-radius: 10px;
+//                         background-color: white;
+//                         margin-top: 30px;
+//                       }
+//                     &:hover{
+//                         &:before{
+//                             width: 100%;
+//                         }
+                        
+//                     }
+//                     a{
+//                         text-decoration: none;
+//                         color: white;
+//                         font-size:18px;
+//                         text-transform: capitalize;
+                       
+//                     }
+//                 }
+//             }
+//         }
+//     }
+// }
+// .menu{
+//     background-color: black;
+//     width: 70%;
+//     right: 0;
+//     position: absolute;
+// }
+@import "../../css-config/mixins.scss";
+
+.navbar {
+  background-color: black;
+  height: 70px;
+  width: 100%;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  
+  
+  box-shadow: 0 2px 2px rgba(255, 255, 255, 0.6);
+  .innernav
+  {
+    max-width: 1300px;
+    width: 100%;
+    padding: 0px 10px;
+    display: flex;
+    justify-content: space-between;
+    align-self: center;
+    margin: 0 auto;
+    a {
+        text-decoration: none;
+        font-size: 20px;
+        color: white;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      
+      .wrapper{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        width: auto;
+        .menuicon {
+            display: block;
+            @include md {
+              display: none;
+            }
+          }
+        .searchbtn
+        {
+            font-size: 20px;
+            margin-right: 20px;
+            @include md{
+              font-size: 40px;
+            }
+        }
+      .navbarright {
+        display: none;
+        align-items: center;
+        @include md {
+          display: flex;
+        }
+        ul {
+          margin-top: 13px;
+          display: flex;
+          list-style: none;
+          li {
+            padding: 2px 10px;
+            text-transform: capitalize;
+            a {
+              text-decoration: none;
+              color: white;
+            }
+          }
+        }
+        .logbtn{
+            width: 120px;
+            height: 40px;
+            border-radius: 5px;
+            border: 1px solid black;
+            cursor: pointer;
+            font-size: 16px;
+            color: black;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-decoration: none;
+            background-color: rgba(255, 255, 255, 0.6);
+            transition: transform 0.2s ease-in-out;
+            &:hover{
+                transform: scale(1.1);
+            }
+           
+        }
+      }
+    }
+  }
+}
+.submenu {
+  background-color: black;
+  height:calc(100vh - 70px);
+  width: 70%;
+  animation: slideIn 0.4s forwards;
+  right: -100%;
+  position: fixed;
+  z-index: 33;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  ul {
+    
+    list-style: none;
+    li {
+        padding: 10px 0px;
+      text-transform: capitalize;
+      a {
+        text-decoration: none;
+        color: white;
+      }
+    }
+  }
+  .logbtn{
+    width: 120px;
+    height: 40px;
+    border-radius: 5px;
+    border: 1px solid black;
+    cursor: pointer;
+    font-size: 16px;
+    color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    background-color: rgba(255, 255, 255, 0.6);
+    transition: transform 0.2s ease-in-out;
+    margin-bottom: 10px;
+    &:hover{
+        transform: scale(1.1);
+    }
+   
+}
+  
+}
+
+@keyframes slideIn {
+    to {
+      right: 0; /* Animate the div to the right: 0 (visible on the screen) */
+    }
+  }
+
+  // @keyframes glow {
+  //   from {
+  //     box-shadow: 0 4px 3px rgba(255, 255, 255, 0.6);
+  //   }
+  //   to {
+  //     box-shadow: 0 4px 12px rgba(255, 255, 255, 0.8);
+  //   }
+  // }

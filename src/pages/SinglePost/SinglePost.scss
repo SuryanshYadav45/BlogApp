@@ -1,0 +1,47 @@
+@import "../../css-config/mixins.scss";
+
+.singlepost{
+    background-color: rgb(209, 206, 206);
+    min-height: calc(100vh - 70px);
+    position: relative;
+    .singlepostwrapper{
+        margin: 0 auto;
+        margin-right: auto;
+        max-width: 1300px;
+        .skeleton{
+            margin-top: 10px;
+        }
+        .imgdiv{
+            position: relative;
+            padding:10px;
+            img{
+                width: 100%;
+                height: 450px;
+            }
+        }
+        .content{
+            padding: 10px;
+            h1{
+                font-size: 23px;
+                @include md{
+                    font-size: 40px;
+                }
+            }
+            p{
+                font-size: 16px;
+                line-height: 1.5;
+                text-align: justify;
+                @include md{
+                    font-size: 19px;
+                    text-align: justify;
+                }
+            }
+            h4{
+                font-size: 18px;
+                @include md{
+                    font-size: 25px;
+                }
+            }
+        }
+    }
+}
